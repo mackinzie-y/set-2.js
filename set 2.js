@@ -45,16 +45,19 @@ return text[newResult]
  * @returns {string} The message, shifted appropriately.
  */
 function caesarCipher(message, shift) {
-    let result=''
-    for (let i = 0;i < message.length; i++) {
-        let x = message.charAt(i)
-        result+=String.fromCharCode((x.charCodeAt(0)-65+shift)%26+65)
+    let result = ''
+    for (let i = 0; i < message.length; i++) {
+        let x = message.charAt(i);
+
+        if (x === ' ') {
+            result += ' '
+        } else {
+            result += String.fromCharCode((x.charCodeAt(0)-65+shift)%26+65)
+        }
     }
-    if (x === ' ') {
-        result += ' '
-    }
-return result
+    return result
 }
+
 
 
 /**
