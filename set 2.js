@@ -25,11 +25,11 @@
  */
 
 function shiftLetter(letter, shift){ 
-let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let result = text.indexOf(letter);
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let result = text.indexOf(letter)
 let newResult= (result+shift)%26
 if (result === -1) {
-    return " ";
+    return " "
 } 
 return text[newResult]
 }
@@ -74,12 +74,12 @@ return result
  * @returns {string} The letter, shifted appropriately
  */
 function shiftByLetter(letter, letterShift) {
-        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        let result = text.indexOf(letter);
-        let resultTwo= text.indexOf(letterShift);
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let result = text.indexOf(letter)
+        let resultTwo= text.indexOf(letterShift)
         let newResult= (result+resultTwo)%26
         if (result === -1) {
-            return " ";
+            return " "
         } 
         return text[newResult]
         }
@@ -110,7 +110,7 @@ function vigenereCipher(message, key) {
           result += String.fromCharCode((x.charCodeAt(0)-65 + key.charCodeAt(j)-65) % 26 + 65) 
         }
         else if (x === ' ') {
-            result += ' '; 
+            result += ' ';
 
         }
       j = ++j % key.length
