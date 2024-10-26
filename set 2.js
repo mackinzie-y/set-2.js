@@ -171,7 +171,7 @@ function scytaleCipher(message, shift) {
         result += message[Math.floor(i / shift) + (length / shift) * (i % shift)]
     }
 
-    return result;
+    return result
 }
 /**
  * Scytale decipher
